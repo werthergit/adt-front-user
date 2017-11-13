@@ -407,8 +407,5 @@ public class RbCustomer extends IntegerDomain {
         this.isDelete = isDelete;
     }
 
-    @Override
-    public String toString() {
-        return "RbCustomer{" + "customerName='" + customerName + '\'' + ", customerCode='" + customerCode + '\'' + ", realNameStatus=" + realNameStatus + ", sex=" + sex + ", phone='" + phone + '\'' + ", driverLicenseCode='" + driverLicenseCode + '\'' + ", isCheck=" + isCheck + ", driverLicenseImg='" + driverLicenseImg + '\'' + ", intentCarCode='" + intentCarCode + '\'' + ", intentCarColor='" + intentCarColor + '\'' + ", createUser='" + createUser + '\'' + ", createUsername='" + createUsername + '\'' + ", createTime=" + createTime + ", updateUser='" + updateUser + '\'' + ", updateUsername='" + updateUsername + '\'' + ", updateTime=" + updateTime + ", isDelete=" + isDelete + '}';
-    }
+
 }

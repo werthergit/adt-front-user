@@ -1,12 +1,15 @@
 package com.adt.service.user.rpc.protocol;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by my on 2017/11/13.
  */
-public class CustomerModel {
+public class CustomerModel implements Serializable {
 
+
+    private Integer id;
     /**
      * 客户姓名
      */
@@ -85,6 +88,14 @@ public class CustomerModel {
      * 是否删除0:未删除，1:删除
      */
     private Byte isDelete;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getCustomerName() {
         return customerName;

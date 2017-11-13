@@ -23,14 +23,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${userPage }" var="user">
+				<c:forEach items="${userPage }" var="customer">
 					<tr>
 						<td>${customer.id }</td>
 						<td>${customer.customerName }</td>
-						<td>${customer.password }</td>
-						<td>${customer.salt }</td>
-						<td>${customer.type }</td>
-						<td>${customer.status }</td>
+						<td>${customer.customerCode }</td>
+
 					</tr>
 				</c:forEach>
 			</tbody>

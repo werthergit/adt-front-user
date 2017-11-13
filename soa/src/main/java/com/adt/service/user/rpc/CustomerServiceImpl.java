@@ -10,7 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -39,10 +41,17 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<CustomerModel> getCustomerPage(int pageNo, int pageSize) {
+        Example example = new Example(RbCustomer.class);
         PageParams<RbCustomer> pageParams=new PageParams<RbCustomer>();
         pageParams.setPageSize(pageSize);
         pageParams.setPageIndex(pageNo);
-        PageResults<RbCustomer> rbCustomerPageResults =  rbCustomerService.queryPageResults(pageParams);
+        PageResults<RbCustomer> rbCustomerPageResults = null;
+        try{
+            rbCustomerPageResults =  rbCustomerService.queryPageResults(pageParams,example);
+        }catch (Exception e){
+            rbCustomerPageResults = new PageResults<RbCustomer>();
+            e.printStackTrace();
+        }
         List<RbCustomer> results = rbCustomerPageResults.getResults();
         return customerMapper.to(results);
     }

@@ -131,6 +131,10 @@
             <groupId>com.adt.front.user</groupId>
             <artifactId>adt-front-user-rpc</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.adt.framework</groupId>
+            <artifactId>adt-framework-common</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

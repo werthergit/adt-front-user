@@ -1,5 +1,6 @@
 package com.adt.service.user.web.controller;
 
+import com.adt.framework.common.base.BaseController;
 import com.adt.service.user.rpc.CustomerService;
 import com.adt.service.user.rpc.protocol.CustomerModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/customer")
-public class CustomerController {
+public class CustomerController extends BaseController {
 
     @Autowired
     private CustomerService customerService;
@@ -21,6 +22,8 @@ public class CustomerController {
     public String toIndex(@RequestParam(value = "pageNo", defaultValue = "0") Integer pageNo, @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize, Model model) {
         List<CustomerModel> userPage = customerService.getCustomerPage(pageNo, pageSize);
         model.addAttribute("userPage", userPage);
+        int infoCount = 10;
+        PageHandler.handlePage(pageNo, pageSize, infoCount, model);
         return "customer-list";
     }
 
