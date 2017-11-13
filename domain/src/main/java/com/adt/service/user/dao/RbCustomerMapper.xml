@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.adt.service.user.dao.RbCustomerMapper" >
+  <resultMap id="BaseResultMap" type="com.adt.service.user.domain.RbCustomer" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="CUSTOMER_NAME" property="customerName" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_CODE" property="customerCode" jdbcType="VARCHAR" />
+    <result column="REAL_NAME_STATUS" property="realNameStatus" jdbcType="TINYINT" />
+    <result column="SEX" property="sex" jdbcType="TINYINT" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="DRIVER_LICENSE_CODE" property="driverLicenseCode" jdbcType="VARCHAR" />
+    <result column="IS_CHECK" property="isCheck" jdbcType="TINYINT" />
+    <result column="DRIVER_LICENSE_IMG" property="driverLicenseImg" jdbcType="VARCHAR" />
+    <result column="INTENT_CAR_CODE" property="intentCarCode" jdbcType="VARCHAR" />
+    <result column="INTENT_CAR_COLOR" property="intentCarColor" jdbcType="VARCHAR" />
+    <result column="CREATE_USER" property="createUser" jdbcType="VARCHAR" />
+    <result column="CREATE_USERNAME" property="createUsername" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_USER" property="updateUser" jdbcType="VARCHAR" />
+    <result column="UPDATE_USERNAME" property="updateUsername" jdbcType="VARCHAR" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="IS_DELETE" property="isDelete" jdbcType="TINYINT" />
+  </resultMap>
+</mapper>
