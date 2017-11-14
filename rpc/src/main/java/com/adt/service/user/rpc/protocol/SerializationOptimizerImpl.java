@@ -1,5 +1,5 @@
 //
-//package com.adt.front.user.rpc.protocol;
+//package com.adt.service.user.rpc.protocol;
 //
 //import com.alibaba.dubbo.common.serialize.support.SerializationOptimizer;
 //import com.adt.front.user.domain.AcotAccount;

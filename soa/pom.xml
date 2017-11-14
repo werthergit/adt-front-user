@@ -10,15 +10,9 @@
     <groupId>com.adt.front.user</groupId>
     <artifactId>adt-front-user-soa</artifactId>
 
-    <properties>
-        <bootstrap.class>com.adt.framework.bootstrap.service.Main</bootstrap.class>
-        <bootstrap.assembly>service-assembly</bootstrap.assembly>
-        <boot.gav>${project.groupId}:${project.artifactId}</boot.gav>
-    </properties>
 
 
     <dependencies>
-
         <dependency>
             <groupId>com.adt.front.user</groupId>
             <artifactId>adt-front-user-rpc</artifactId>
@@ -32,15 +26,15 @@
             <artifactId>adt-framework-common</artifactId>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
-        </dependency>
+        </dependency>-->
 
-        <dependency>
+        <!--<dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
-        </dependency>
+        </dependency>-->
 
 
         <!-- org.mapstruct/mapstruct-jdk8 实体模型转换映射工具包 -->

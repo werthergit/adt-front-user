@@ -45,15 +45,18 @@
     <dubbo:annotation package="com.alibaba.dubbo.demo.user.facade" />
 
     <!-- 使用dubbo协议 -->
-    <dubbo:protocol name="dubbo" port="${dubbo.service.port}" serialization="kryo"
-                    optimizer="com.adt.front.user.rpc.protocol.SerializationOptimizerImpl"
-    />
+    <!--<dubbo:protocol name="dubbo" port="${dubbo.service.port}" serialization="kryo"
+                    optimizer="com.adt.service.user.rpc.protocol.SerializationOptimizerImpl"
+    />-->
 
     <!-- 设定dubbo默认参数 -->
-    <dubbo:provider timeout="2000" retries="1" />
-    <dubbo:consumer timeout="2000" retries="1" />
+    <dubbo:provider timeout="30000" retries="1" />
+    <dubbo:consumer timeout="30000" retries="1" />
 
 
-
+    <import resource="classpath*:spring/spring-config-pubsub-sub.xml" />
+    <import resource="classpath*:spring/spring-config-dao.xml" />
+    <import resource="classpath*:spring/spring-config-dataSource.xml" />
     <import resource="classpath*:context/soa-service-*.xml"/>
+
 </beans>

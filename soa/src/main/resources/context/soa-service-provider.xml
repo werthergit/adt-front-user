@@ -8,17 +8,16 @@
 
        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <context:component-scan base-package="com.adt.front.user" />
+    <context:component-scan base-package="com.adt.service.user" />
 
     <bean class="org.springframework.beans.factory.config.PropertyOverrideConfigurer">
         <property name="properties">
-            <value>mapperScannerConfigurer.basePackage=com.adt.front.user.dao</value>
+            <value>mapperScannerConfigurer.basePackage=com.adt.service.user.dao</value>
         </property>
     </bean>
 
     <!-- 要暴露给外部的服务 -->
-
-    <dubbo:service interface="com.adt.front.user.rpc.UserService" ref="userService" protocol="dubbo" version="0.0.0.1"/>
+    <dubbo:service interface="com.adt.service.user.rpc.CustomerService" ref="customerServiceImpl" protocol="dubbo" version="0.0.0.1" />
 
 
 </beans>
