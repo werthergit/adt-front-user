@@ -138,7 +138,7 @@
     </dependencies>
 
     <build>
-        <finalName>adt-customer</finalName>
+        <finalName>adt-front-user-web</finalName>
         <plugins>
             <!-- tomcat-maven-plugin -->
             <plugin>

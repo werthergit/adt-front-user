@@ -21,8 +21,7 @@
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator" />
 
     <context:annotation-config />
+    <import resource="dubbo-root-provider.xml"/>
 
-    <!--<import resource="dubbo-root-provider.xml"/>-->
 
-    <!--<import resource="classpath*:spring/spring-context.framework.mq-sender.xml"/>-->
 </beans>

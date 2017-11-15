@@ -7,7 +7,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-dubbo.xml</param-value>
+		<param-value>classpath*:spring/applicationContext.xml</param-value>
 	</context-param>
 
 	<filter>
@@ -32,17 +32,17 @@
 	</listener>
 
 	<servlet>
-		<servlet-name>SpringMVC</servlet-name>
+		<servlet-name>spring-web</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring-mvc.xml</param-value>
+			<param-value>classpath*:spring/application-servlet.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 		<async-supported>true</async-supported>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>SpringMVC</servlet-name>
+		<servlet-name>spring-web</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 

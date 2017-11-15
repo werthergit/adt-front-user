@@ -10,5 +10,8 @@
     <!--<dubbo:reference id="orderAPI" interface="com.adt123.service.order.api.OrderAPI" version="0.0.0.1" check="false"/>-->
     <!--<dubbo:reference id="productAPI" interface="com.adt123.service.order.api.ProductAPI" version="0.0.0.1" check="false"/>-->
 
+    <dubbo:reference id="customerService"
+                     interface="com.adt.service.user.rpc.CustomerService" check="false" version="0.0.0.1"/>
+
 
 </beans>

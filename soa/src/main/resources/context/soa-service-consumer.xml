@@ -14,6 +14,6 @@
     <!--<dubbo:reference id="userCache" interface="com.adt.front.user.user.cache.UserCache" version="1.0.0" check="false"/>-->
     <!--<dubbo:reference id="userService" interface="com.adt.front.user.user.biz.UserService" version="1.0.0" check="false"/>-->
     <!--<dubbo:reference id="customerService" interface="com.adt.front.user.user.biz.CustomerService" version="1.0.0" check="false"/>-->
-    <dubbo:reference id="customerService" interface="com.adt.service.user.rpc.CustomerService" version="1.0.0" check="false"/>
-
+    <!--<dubbo:reference id="customerService" interface="com.adt.service.user.rpc.CustomerService" version="1.0.0" check="false"/>
+-->
 </beans>
