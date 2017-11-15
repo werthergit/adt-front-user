@@ -1,7 +1,7 @@
 package com.adt.service.user.biz.impl;
 
 import com.adt.framework.common.service.impl.BasicServiceImpl;
-import com.adt.service.user.biz.RbCustomerService;
+import com.adt.service.user.biz.RbCustomerBizService;
 import com.adt.service.user.domain.RbCustomer;
 import com.adt.service.user.model.RbCustomerModel;
 import org.springframework.stereotype.Service;
@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
  * Created by my on 2017/7/6.
  */
 @Service
-public class RbCustomerServiceImpl extends BasicServiceImpl<RbCustomer,Integer, RbCustomerModel>
-        implements RbCustomerService {
+public class RbCustomerBizServiceImpl extends BasicServiceImpl<RbCustomer,Integer, RbCustomerModel>
+        implements RbCustomerBizService {
 
 
 

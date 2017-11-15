@@ -2,7 +2,7 @@ package com.adt.service.user.rpc;
 
 import com.adt.framework.common.mydao.model.PageParams;
 import com.adt.framework.common.mydao.model.PageResults;
-import com.adt.service.user.biz.RbCustomerService;
+import com.adt.service.user.biz.RbCustomerBizService;
 import com.adt.service.user.domain.RbCustomer;
 import com.adt.service.user.mapstruct.CustomerMapper;
 import com.adt.service.user.rpc.protocol.CustomerModel;
@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -25,14 +24,14 @@ public class CustomerServiceImpl implements CustomerService {
     private final Logger logger = LoggerFactory.getLogger(CustomerServiceImpl.class);
 
     @Autowired
-    private RbCustomerService rbCustomerService;
+    private RbCustomerBizService rbCustomerBizService;
 
     @Autowired
     private CustomerMapper customerMapper;
 
     @Override
     public CustomerModel getCustomerById(int userId) {
-        RbCustomer rbCustomer =  rbCustomerService.get(userId);
+        RbCustomer rbCustomer =  rbCustomerBizService.get(userId);
         logger.info("开始打印："+rbCustomer.toString());
         return customerMapper.to(rbCustomer);
     }
@@ -47,7 +46,7 @@ public class CustomerServiceImpl implements CustomerService {
         pageParams.setPageIndex(pageNo);
         PageResults<RbCustomer> rbCustomerPageResults = null;
         try{
-            rbCustomerPageResults =  rbCustomerService.queryPageResults(pageParams,example);
+            rbCustomerPageResults =  rbCustomerBizService.queryPageResults(pageParams,example);
         }catch (Exception e){
             rbCustomerPageResults = new PageResults<RbCustomer>();
             e.printStackTrace();

@@ -10,7 +10,7 @@ import com.adt.service.user.model.RbCustomerModel;
  * <p></p>
  * Created by my on 2017/7/6.
  */
-public interface RbCustomerService extends BasicService<RbCustomer,Integer, RbCustomerModel> {
+public interface RbCustomerBizService extends BasicService<RbCustomer,Integer, RbCustomerModel> {
 
 
 }
